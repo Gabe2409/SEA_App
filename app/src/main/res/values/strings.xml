@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Title of the App-->
+    <string name="app_name">SEA Mathematics</string>
+
+
+
+
+    <!-- Title for the Main Page-->
+    <!-- Main Page-->
+    <string name="home_title">English</string>
+
+    <string name="footer_text">JJ &amp; Friends</string>
+
+    <string name="main_button">Learn</string>
+
+    <string name="second_button">Quiz</string>
+
+
+
+
+
+
+    <!-- Next-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

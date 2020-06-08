@@ -1,0 +1,43 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--background to compensate the transparency under shadow and glow (for bigger depth values)-->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <solid android:color="@color/colorPrimaryDark"/>
+
+
+        </shape>
+
+    </item>
+
+    <!--top, dark, inner shadow-->
+    <item
+        android:bottom="@dimen/button_depth">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <solid android:color="#d2fcfc" />
+
+        </shape>
+
+    </item>
+
+    <!--bottom, light, outer glow-->
+    <item
+        android:top="@dimen/button_depth">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <solid android:color="#4DFFFFFF" />
+        </shape>
+    </item>
+
+    <!--your color-->
+    <item
+        android:top="@dimen/button_depth"
+        android:bottom="@dimen/button_depth">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp" />
+            <solid android:color="#d2fcfc" />
+            />
+        </shape>
+    </item>
+</layer-list>
