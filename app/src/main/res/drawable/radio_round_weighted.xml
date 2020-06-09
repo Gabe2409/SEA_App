@@ -2,19 +2,17 @@
     <!--background to compensate the transparency under shadow and glow (for bigger depth values)-->
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="25dp" />
-            <solid android:color="@color/colorButton"/>
-
-
+            <corners android:radius="15dp" />
+            <solid android:color="@color/colorTextB"/>
         </shape>
 
     </item>
 
     <!--top, dark, inner shadow-->
     <item
-        android:bottom="@dimen/button_depth">
+        android:bottom="@dimen/text_depth">
         <shape android:shape="rectangle">
-            <corners android:radius="25dp" />
+            <corners android:radius="15dp" />
             <solid android:color="#d2fcfc" />
 
         </shape>
@@ -23,19 +21,19 @@
 
     <!--bottom, light, outer glow-->
     <item
-        android:top="@dimen/button_depth">
+        android:top="@dimen/text_depth">
         <shape android:shape="rectangle">
-            <corners android:radius="25dp" />
+            <corners android:radius="15dp" />
             <solid android:color="#4DFFFFFF" />
         </shape>
     </item>
 
     <!--your color-->
     <item
-        android:top="@dimen/button_depth"
+        android:top="@dimen/text_depth"
         android:bottom="@dimen/button_depth">
         <shape android:shape="rectangle">
-            <corners android:radius="25dp" />
+            <corners android:radius="15dp" />
             <solid android:color="#d2fcfc" />
             />
         </shape>

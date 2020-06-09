@@ -21,14 +21,13 @@
         <!--app:srcCompat="@drawable/hbg" -->
 
 
-
-
     <Button
         android:id="@+id/exitbutton"
+        android:paddingBottom="5dp"
         android:layout_width="210dp"
-        android:layout_height="50dp"
-        android:shadowColor="#A8A8A8"
+        android:layout_height="65dp"
         android:background="@drawable/button_round_weighted"
+        android:shadowColor="#A8A8A8"
         android:shadowDx="-1"
         android:shadowDy="2"
         android:shadowRadius="5"

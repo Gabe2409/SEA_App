@@ -6,76 +6,135 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Button that goes to the next Question -->
+
+
+    <!-- Button that Quits and goes to the menu -->
+
 
     <Button
         android:id="@+id/nextbutton"
-        android:layout_width="326dp"
-        android:layout_height="37dp"
-        android:background="#00FFE4"
+        android:paddingBottom="5dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_round_weighted"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="-1"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:shape="rectangle"
         android:text="Next Question"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.864" />
 
     <Button
         android:id="@+id/buttonquit"
-        android:layout_width="326dp"
-        android:layout_height="37dp"
-        android:background="#DA65FF"
+        android:paddingBottom="5dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_round_weighted"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="-1"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:shape="rectangle"
         android:text="Quit"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
-
-
-
+        app:layout_constraintVertical_bias="0.957" />
 
     <RadioGroup
         android:id="@+id/answersgrp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/divider2"
         android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        android:focusable="true">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662">
+
 
         <RadioButton
             android:id="@+id/radiobutton4"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/radio_round_weighted"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="-1"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:shape="rectangle"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
             android:text="D"
-            android:textSize="18sp" />
+            android:textColor="@color/colorPrimaryDark"
 
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radiobutton2"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/radio_round_weighted"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="-1"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:shape="rectangle"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
             android:text="B"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radiobutton3"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/radio_round_weighted"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="-1"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:shape="rectangle"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
             android:text="C"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
 
 
         <RadioButton
             android:id="@+id/radiobutton1"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/radio_round_weighted"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="-1"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:shape="rectangle"
+            android:button="@android:color/transparent"
+            android:textAlignment="center"
             android:text="A"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
 
 
@@ -95,26 +154,28 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#B5B5B5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.435" />
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="136dp"
         android:background="#B5B5B5"
         app:layout_constraintBottom_toTopOf="@+id/nextbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.879" />
 
     <TextView
         android:id="@+id/questionview"
