@@ -9,20 +9,16 @@
     tools:context=".DashboardActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_marginTop="5dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/learn" />
-
     <TextView
         android:id="@+id/topicname"
-        android:layout_width="wrap_content"
+        android:layout_width="382dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="25dp"
-        android:layout_toRightOf="@id/imageView4"
+        android:background="@drawable/dashboard_items_text"
+        android:padding="10dp"
+        android:gravity="center"
         android:text="The Commutative law of Arithmetic"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp">
@@ -30,12 +26,11 @@
 
     </TextView>
 
-
     <View
         android:id="@+id/divider3"
         android:layout_width="match_parent"
         android:layout_marginTop="70dp"
-        android:layout_height="5dp"
+        android:layout_height="2dp"
         android:background="?android:attr/listDivider" />
 
 </RelativeLayout>

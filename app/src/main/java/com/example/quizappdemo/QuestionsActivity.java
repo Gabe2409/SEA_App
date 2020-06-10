@@ -4,8 +4,11 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,6 +62,22 @@ public class QuestionsActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
+        // toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            toolbar.setTitle("Back");
+
+        }
+
+
+
+
         pBar = (ProgressBar) findViewById(R.id.progressBar);
         submitbutton = (Button) findViewById(R.id.nextbutton);
         quitbutton = (Button) findViewById(R.id.buttonquit);
@@ -69,6 +88,8 @@ public class QuestionsActivity extends AppCompatActivity{
         rb2 = (RadioButton) findViewById(R.id.radiobutton2);
         rb3 = (RadioButton) findViewById(R.id.radiobutton3);
         rb4 = (RadioButton) findViewById(R.id.radiobutton4);
+        View ba1 = (View) findViewById(R.id.divider);
+
         tv.setText(questions[count]);
         rb1.setText(opt[0]);
         rb2.setText(opt[1]);
@@ -96,6 +117,7 @@ public class QuestionsActivity extends AppCompatActivity{
                 if(useransText.equals(answers[count])){
                     correct++;
                     Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
+
                 }
 
                 else {
@@ -149,6 +171,17 @@ public class QuestionsActivity extends AppCompatActivity{
         });
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
 }
