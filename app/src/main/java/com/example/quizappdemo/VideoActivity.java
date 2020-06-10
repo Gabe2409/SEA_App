@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
@@ -20,6 +21,9 @@ import android.widget.VideoView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import org.w3c.dom.Text;
 
@@ -89,6 +93,9 @@ public class VideoActivity extends AppCompatActivity {
     public static int marks=0,correct=0,wrong=0;
 
 
+
+
+    // These Things Concerns the  Video Playing
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
 
@@ -98,100 +105,21 @@ public class VideoActivity extends AppCompatActivity {
 
         getIncomingIntent();
 
-        pBar = (ProgressBar) findViewById(R.id.progressBar);
-        submitbutton = (Button) findViewById(R.id.nextbutton);
-        quitbutton = (Button) findViewById(R.id.buttonquit);
-        tv = (TextView) findViewById(R.id.questionview);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.coltoolbar);
+        collapsingToolbarLayout.setTitleEnabled(false);
 
-        final RadioGroup radio_g = (RadioGroup) findViewById(R.id.answersgrp);
-        rb1 = (RadioButton) findViewById(R.id.radiobutton1);
-        rb2 = (RadioButton) findViewById(R.id.radiobutton2);
-        rb3 = (RadioButton) findViewById(R.id.radiobutton3);
-        rb4 = (RadioButton) findViewById(R.id.radiobutton4);
-        tv.setText(questions[count]);
-        rb1.setText(opt[0]);
-        rb2.setText(opt[1]);
-        rb3.setText(opt[2]);
-        rb4.setText(opt[3]);
+        // Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        submitbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        // Add back arrow to toolbar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            toolbar.setTitle("Back");
 
-
-                //Checks if the user selects an answer or not
-                if(radio_g.getCheckedRadioButtonId()==-1){
-
-                    Toast.makeText(getApplicationContext(), "Please Select an Answer", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-
-                RadioButton userans = (RadioButton)findViewById(radio_g.getCheckedRadioButtonId());
-                String useransText = userans.getText().toString();
-
-
-                if(useransText.equals(answers[count])){
-                    correct++;
-                    Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT).show();
-                }
-
-                else {
-                    wrong++;
-                    Toast.makeText(getApplicationContext(), "Incorrect!", Toast.LENGTH_SHORT).show();
-                }
-
-                //Goes onto the next question
-                count++;
-
-                pbarStatus = pbarStatus + 20;
-                android.os.SystemClock.sleep(50);
-                pbarHandler.post(new Runnable (){
-                    @Override
-                    public void run(){
-                        pBar.setProgress(pbarStatus);
-                    }
-                });
-
-
-                if(count<questions.length){
-                    tv.setText(questions[count]);
-                    rb1.setText(opt[count*4]);
-                    rb2.setText(opt[count*4 +1]);
-                    rb3.setText(opt[count*4 +2]);
-                    rb4.setText(opt[count*4 +3]);
-                }
-
-                else{
-
-                    Intent intent2 = new Intent(getApplicationContext(), ResultsActivity.class);
-                    startActivity(intent2);
-                }
-                radio_g.clearCheck();
-            }
-        });
-
-        quitbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
 
@@ -217,11 +145,10 @@ public class VideoActivity extends AppCompatActivity {
 
 
 
-                    String videoResource = R.raw.cloa + TopicVid;
+               //String videoResource = R.raw.cloa + TopicVid;
 
 
                 String path = "android.resource://" + getPackageName() + "/raw/" + videoArray[Integer.parseInt(TopicVid)];
-               // String path = "android.resource://" + getPackageName() + "/" + R.raw.cloa;
 
                 Uri u = Uri.parse(path);
 
@@ -236,12 +163,18 @@ public class VideoActivity extends AppCompatActivity {
             }
         });
 
+    }
 
 
 
+    // handle arrow click here
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-
-
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

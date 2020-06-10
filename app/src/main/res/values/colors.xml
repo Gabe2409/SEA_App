@@ -15,6 +15,13 @@
     <color name="colorAccent">#03DAC5</color>
 
 
+
+    <color name="colorTransparent">#000000</color>
+
+
+
+
+
     <!-- Default Color of the Buttons-->
     <color name="colorButton">#45d0ff</color>
 

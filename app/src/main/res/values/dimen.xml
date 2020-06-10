@@ -11,7 +11,7 @@
     <dimen name="dashboard_items_text">4dp</dimen>
 
 
-    <dimen name="actionbar_size">4dp</dimen>
+    <dimen name="actionbar_size">25dp</dimen>
 
 
 
