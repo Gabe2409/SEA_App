@@ -6,15 +6,17 @@
 
 
 
-    <!-- Title for the Main Page-->
+
     <!-- Main Page-->
+
+    <!-- Title for the Main Page-->
     <string name="home_title">Mathematics</string>
 
     <string name="footer_text">JJ &amp; Friends</string>
 
     <string name="main_button">Learn</string>
 
-    <string name="second_button">Quiz</string>
+    <string name="second_button">Practice Exercises</string>
 
 
 
@@ -22,14 +24,6 @@
 
 
     <!-- Next-->
-
-
-
-
-
-
-
-
 
 
 

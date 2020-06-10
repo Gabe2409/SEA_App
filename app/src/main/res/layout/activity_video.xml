@@ -15,7 +15,9 @@
         android:layout_marginBottom="20dp"
         android:background="@color/colorTransparent"
         android:text="Test"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_anchor="@+id/appbar"
+        app:layout_anchorGravity="top|center" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

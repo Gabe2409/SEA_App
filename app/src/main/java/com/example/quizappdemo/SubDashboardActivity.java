@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DashboardActivity extends AppCompatActivity {
+public class SubDashboardActivity extends AppCompatActivity {
     private static final String TAG = "DashboardActivity";
 
     private ArrayList<String> mTopicNames = new ArrayList<>();
@@ -50,7 +50,7 @@ public class DashboardActivity extends AppCompatActivity {
         }
 
             Log.d(TAG, "onCreate: Started");
-            //TODO REMOVE USELESS LOGD
+
         initTopics();
 
 
