@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--background to compensate the transparency under shadow and glow (for bigger depth values)-->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp" />
+            <solid android:color="@color/colorButton"/>
+
+
+        </shape>
+
+    </item>
+
+    <!--top, dark, inner shadow-->
+    <item
+        android:bottom="@dimen/radio_checked">
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp" />
+            <solid android:color="#d2fcfc" />
+
+        </shape>
+
+    </item>
+
+</layer-list>

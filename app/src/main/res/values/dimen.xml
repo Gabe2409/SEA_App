@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_depth">9dp</dimen>
-    <dimen name="text_depth">4dp</dimen>
+
+
+    <dimen name="radio_unchecked">7dp</dimen>
+
+    <dimen name="radio_checked">3dp</dimen>
+
 
 
 

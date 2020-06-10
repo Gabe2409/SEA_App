@@ -68,46 +68,48 @@
 
 
         <RadioButton
-            android:id="@+id/radiobutton4"
+            android:id="@+id/radiobutton2"
             android:layout_width="210dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/radio_round_weighted"
+            android:background="@drawable/radio_button_state"
+            android:button="@android:color/transparent"
+            android:checked="false"
             android:shadowColor="#A8A8A8"
             android:shadowDx="-1"
             android:shadowDy="2"
             android:shadowRadius="5"
             android:shape="rectangle"
-            android:button="@android:color/transparent"
+            android:text="B"
             android:textAlignment="center"
-            android:text="D"
             android:textColor="@color/colorPrimaryDark"
-
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/radiobutton2"
+            android:id="@+id/radiobutton4"
             android:layout_width="210dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/radio_round_weighted"
+            android:background="@drawable/radio_button_state"
+            android:button="@android:color/transparent"
+            android:checked="false"
             android:shadowColor="#A8A8A8"
             android:shadowDx="-1"
             android:shadowDy="2"
             android:shadowRadius="5"
             android:shape="rectangle"
-            android:button="@android:color/transparent"
+            android:text="D"
             android:textAlignment="center"
-            android:text="B"
             android:textColor="@color/colorPrimaryDark"
+
             android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radiobutton3"
             android:layout_width="210dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/radio_round_weighted"
+            android:background="@drawable/radio_button_state"
             android:shadowColor="#A8A8A8"
             android:shadowDx="-1"
             android:shadowDy="2"
@@ -117,15 +119,16 @@
             android:textAlignment="center"
             android:text="C"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:checked="false"/>
 
 
         <RadioButton
             android:id="@+id/radiobutton1"
             android:layout_width="210dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/radio_round_weighted"
+            android:background="@drawable/radio_button_state"
             android:shadowColor="#A8A8A8"
             android:shadowDx="-1"
             android:shadowDy="2"
@@ -135,7 +138,8 @@
             android:textAlignment="center"
             android:text="A"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:checked="false"/>
 
 
     </RadioGroup>
@@ -162,7 +166,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <View
         android:id="@+id/divider2"
