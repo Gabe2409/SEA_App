@@ -16,8 +16,8 @@ import java.util.ArrayList;
 public class DashboardActivity extends AppCompatActivity {
     private static final String TAG = "DashboardActivity";
 
-    private ArrayList<String> mTopicNames = new ArrayList<>();
-    private ArrayList<String> mTopicVideos = new ArrayList<>();
+    private ArrayList<String> mChapters = new ArrayList<>();
+
 
 
 
@@ -72,27 +72,45 @@ public class DashboardActivity extends AppCompatActivity {
 
     private void initTopics(){
 
-        Log.d(TAG, "initTopics:  Preparing Topics");
+        Log.d(TAG, "initTopics:  Preparing Chapters");
 
-        mTopicNames.add("The Commutative law of Arithmetic");
-        mTopicVideos.add("0");
+        mChapters.add("Chapter 1");
+        mChapters.add("Chapter 2");
+        mChapters.add("Chapter 3");
+        mChapters.add("Chapter 4");
+        mChapters.add("Chapter 5");
+        mChapters.add("Chapter 6");
+        mChapters.add("Chapter 7");
+        mChapters.add("Chapter 8");
+        mChapters.add("Chapter 9");
+        mChapters.add("Chapter 10");
+        mChapters.add("Chapter 11");
+        mChapters.add("Chapter 12");
+        mChapters.add("Chapter 13");
+        mChapters.add("Chapter 14");
+        mChapters.add("Chapter 15");
+        mChapters.add("Chapter 16");
+        mChapters.add("Chapter 17");
+        mChapters.add("Chapter 18");
+        mChapters.add("Chapter 19");
+        mChapters.add("Chapter 20");
+        mChapters.add("Chapter 21");
+        mChapters.add("Chapter 22");
+        mChapters.add("Chapter 23");
+        mChapters.add("Chapter 24");
+        mChapters.add("Chapter 25");
+        mChapters.add("Chapter 26");
+        mChapters.add("Chapter 27");
+        mChapters.add("Chapter 28");
 
-        mTopicNames.add("The Associative law of Arithmetic");
-        mTopicVideos.add("1");
-
-        mTopicNames.add("The Distributive law of Arithmetic");
-        mTopicVideos.add("2");
-
-
-        initRecyclerView();
+       initRecyclerView();
 
     }
 
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView:  init Recyclerview");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-         ListAdapter adapter = new ListAdapter(mTopicNames,mTopicVideos, this);
-        //ListAdapter adapter = new ListAdapter(mTopicNames,this);
+        ListAdapter adapter = new ListAdapter(mChapters,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
