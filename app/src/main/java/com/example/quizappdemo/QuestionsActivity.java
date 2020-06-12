@@ -1,28 +1,21 @@
 package com.example.quizappdemo;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import org.w3c.dom.Text;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import java.util.List;
 
 
 public class QuestionsActivity extends AppCompatActivity{
@@ -48,6 +41,10 @@ public class QuestionsActivity extends AppCompatActivity{
             "Sum", "Difference", "Product", "Quotient"
 
     };
+
+
+    //private List<Question> questionList;
+
 
     private ProgressBar pBar;
     private int pbarStatus =0;
@@ -77,7 +74,6 @@ public class QuestionsActivity extends AppCompatActivity{
 
 
 
-
         pBar = (ProgressBar) findViewById(R.id.progressBar);
         submitbutton = (Button) findViewById(R.id.nextbutton);
         quitbutton = (Button) findViewById(R.id.buttonquit);
@@ -95,6 +91,11 @@ public class QuestionsActivity extends AppCompatActivity{
         rb2.setText(opt[1]);
         rb3.setText(opt[2]);
         rb4.setText(opt[3]);
+
+        //QuizDBHelper dbHelper = new QuizDBHelper(this);
+        //questionList = dbHelper.getAllQuestions();
+
+
 
         submitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
